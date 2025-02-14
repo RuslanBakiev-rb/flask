@@ -5,3 +5,5 @@ class StudentsBL():
     @staticmethod
     def get_all_students():
         return StudentsDAL.get_all_students()
+    def insert_students():
+        return StudentsDAL.insert_students()

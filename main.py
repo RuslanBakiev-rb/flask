@@ -11,20 +11,10 @@ def index():
     return StudentsBL.get_all_students()
 
 
-# @app.route('/create/', methods=('GET', 'POST'))
-# def create():
-#     if request.method == 'POST':
-#         first_name = request.form['first_name']
-#         last_name = request.form['last_name']
-#         group_students = request.form['group_students']
-#
-#         conn = connection_db()
-#         cursor.execute('INSERT INTO students (first_name, last_name, group_students)'
-#                        'VALUES (%s, %s, %s)'
-#                        (first_name, last_name, group_students))
-#         conn.commit()
-#         cur.close()
-#         conn.close()
+@app.route('/insert', methods=['POST'])
+def insert_index():
+    return StudentsBL.insert_students()
+
 
 
 if __name__ == '__main__':
